@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /*1-> 开局可以随意定义一个高度,越大越好，只要宽度测量准确就是没有问题
+      2-> 定义真是需求的高度，注意标签属性自带的margin和padding要清零
+      3-> 给每一个li里面的a标签定义display:block属性，这样a标签就会占满整个li的高度和宽度，这样就可以实现整个li的点击效果
+    
+    */
+   *{
+        margin:0;
+        padding:0;
+    }
+    a{
+        text-decoration: none;
+        color: black;
+    }
+    .box1{
+        width: 300px;
+        /* height: 700px; */
+        /* border:1px solid black; */
+        background: linear-gradient(to right,rgb(247, 220, 148),rgb(205, 249, 210));
+    }
+    .ul1{
+         color:black;
+         padding-top: 20px;
+         padding-bottom: 40px;
+    }
+    .ul1 li{
+   height: 42px;
+   line-height: 42px;
+    }
+      .ul1 li a{
+        display: block;
+        /* border:1px solid black; */
+        /* text-indent: 2em; 开局缩紧两个字符 */
+        padding-left: 20px;
+        color: #000;
+        background: url(./img/right-jiantou2.png);
+        background-repeat: no-repeat;
+        background-position: 230px center ;
+
+    }
+     .ul1 li a:hover{
+        background-color: rgb(255, 112, 0);
+        color: black;
+    }
+
+
+</style>
+<body>
+    <div class="box1">
+        <ul class="ul1">
+            <li class="li-1"><a href="">电脑</a></li>
+            <li class="li-1"><a href="">电脑</a></li>
+            <li class="li-1"><a href="">电脑</a></li>
+            <li class="li-1"><a href="">电脑</a></li>
+            <li class="li-1"><a href="">电脑</a></li>
+            <li class="li-1"><a href="">电脑</a></li>
+            <li class="li-1"><a href="">电脑</a></li>
+            <li class="li-1"><a href="">电脑</a></li>
+            <li class="li-1"><a href="">电脑</a></li>
+            <li class="li-1"><a href="">电脑</a></li>  
+        </ul>
+    </div>
+
+</body>
+</html>

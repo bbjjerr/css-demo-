@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+
+        }
+        body{
+            margin: 0 ;
+        }
+        .box1{
+            width: 800px;
+            /* height: 50px; */
+            background: #F8F8F8;
+            border-radius: 50px;
+            margin: 50px  auto 0 ;
+            font-size: 0px;
+            text-align: center;
+            padding: 5px 0; 
+            
+        }  
+          /* 盒子的设计由内到外面 ----->根据设计图来看单个元素的大小是40px
+           --->然后设置好盒子的模型然后扩充盒子的padding，撑起来图形
+           发现盒子上下还有空隙 需要设置span的行高line-height = height
+           子盒子和父盒子看见由5px的空隙可以设置父盒子的padding设置成5px
+           因为background的color会扩展到padding区域
+           这样就可以实现设计图的效果了
+        */
+        .box1 span{
+          border:1px solid red;
+          height: 40px;
+          display: inline-block;
+          padding:0 40px;   /* 给span设置左右内边距 挤压空间，因为设置完成内外边距，会压缩视觉的width和height*/
+          line-height: 40px;  /* 给span设置行*/
+          border-radius: 50px;
+          font-size: 16px;
+      
+        }
+         .box1 span:hover{
+            background-color: pink;
+         }
+
+        .box1 span i{
+          width: 26px;
+          height: 25px;
+
+          display: inline-block;
+          vertical-align: middle;
+          margin-right: 8px;
+          transition: background-position .3s;
+
+        }
+        .box1 span .icon1{
+          background: url(./img/icon_副本.png);
+      
+        }
+
+         .box1 span .icon2{
+          background: url(./img/icon_副本.png);
+              background-position: -26px 0;
+        }
+
+        
+         .box1 span .icon3{
+          background: url(./img/icon_副本.png);
+                background-position: -52px 0;
+        }
+
+         .box1 span .icon4{
+          background: url(./img/icon_副本.png);
+                background-position: -78px 0;
+        }
+
+
+
+         .box1 span .icon5{
+          background: url(./img/icon_副本.png);
+                background-position: -104px 0;
+        }
+      
+                
+                .box1 span:hover .icon1 {
+        background-position: 0 -26px;
+        }
+
+        .box1 span:hover .icon2 {
+        background-position: -26px -26px;
+        }
+
+        .box1 span:hover .icon3 {
+        background-position: -52px -26px;
+        }
+
+        .box1 span:hover .icon4 {
+        background-position: -78px -26px;
+        }
+
+        .box1 span:hover .icon5 {
+        background-position: -104px -26px;
+        }
+
+
+    </style>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div class="box1">
+        <span><i class="icon1"></i>孕期备孕</span>
+        <span><i class="icon2"></i>怀孕</span>
+        <span><i class="icon3"></i>产后</span>
+        <span><i class="icon4"></i>宝宝</span>
+        <span><i class="icon5"></i>育儿</span>
+        </div><i class="icon6"></i>    
+
+        <script src="" async defer></script>
+    </body>
+</html>

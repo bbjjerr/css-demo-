@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <style>
+        p{
+            margin:0
+        }
+        .box1{
+            height: 200px;
+            border:1px solid red;
+            display: flex;
+               width: fit-content;
+            justify-content: center;
+            align-items: center;
+        }
+        .img1{
+           height: 36px;
+           width: 36px;
+       
+           background: url(
+            ./img/关闭.png
+           );
+           background-size: 36px 36px;
+           background-position: -36px;
+           background-repeat: no-repeat;
+          transition: background-position .3s;
+     
+        }
+        .box1:hover .img1{
+            background-position: 0;
+            
+        }
+        
+        .img2{
+            height:100px;
+             width: auto;
+    
+        }
+        .box2{
+            margin-left: 10px;
+            display: block;
+            height: 80px;
+            width: 395px;
+     
+    
+            font-size: 20px;
+        }
+    </style>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div class="box1">
+          <div class="img1"></div>
+
+            <img class="img2" src="./img/关闭.png" alt="关闭">
+            <div class="box2">
+                <p>评论已关闭</p>
+                <p>本文章评论功能已关闭，如有问题请联系管理员！</p>
+            </div>
+        </div>
+
+        <script src="" async defer></script>
+    </body>
+</html>

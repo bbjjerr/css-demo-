@@ -105,8 +105,8 @@
                 <p class="left-tip"><span style="color: skyblue;">热门</span>榜单</p>
                 <p class="right-tip">查看更多</p>
             </div>
-            <div class="wenzhang  ">
-                <div class="demo1 clearfix">
+            <div class="wenzhang">
+                <!-- <div class="demo1 clearfix">
                     <div class="demo1-right">
                         <img class="nav1" src="./img/nav1.jpg" alt="图片1">
                     </div>
@@ -153,9 +153,32 @@
                         <img class="right-nav" src="./img/arrow.png" alt="图片2">
                     </div>
                     
-                </div>
+                </div> -->
             </div>
         </div>
-        <script src="" async defer></script>
+        <script>
+            // 利用js来循环完成图片和文字的添加
+            const arr = ['./img/nav1.jpg','./img/nav2.jpg','./img/nav3.jpg'];
+            let str = '';
+            for( let i = 0 ; i< arr.length; i++){
+                str = str + `
+             <div class="demo1 clearfix">
+                <div class="demo1-right">
+                    <img class="nav1" src="${arr[i]}" alt="图片1">
+                </div>
+                <div class="middle">
+                    <div class="middle-content">
+                    <p >酷狗音乐飙升榜</p>
+                    <p>1.很受伤</p>         
+                    <p>2.我不吃柠檬</p>
+                    </div>
+                </div>
+                <div class="dem1-left">
+                    <img class="right-nav" src="./img/arrow.png" alt="图片2">
+                </div>
+            </div>`;
+            }
+            document.querySelector('.wenzhang').innerHTML = str;
+        </script>
     </body>
 </html>

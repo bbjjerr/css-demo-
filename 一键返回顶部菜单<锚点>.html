@@ -13,9 +13,6 @@
     <link rel="stylesheet" href="" />
   </head>
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
     body {
       height: 3000px;
     }
@@ -23,27 +20,94 @@
       text-decoration: none;
       color: #000;
     }
-    .returnTop {
-      height: 30px;
-      line-height: 30px;
-      background-color: skyblue;
-      padding: 0 10px;
+    .mark {
+      width: 100%;
+      height: 100%;
+      background-color: rgb(0, 0, 0, 0.5);
       position: fixed;
-      right: 10px;
-      bottom: 30px;
+      top: 0;
+      left: 0;
+      display: none;
+    }
+    .login {
+      box-sizing: border-box;
+      width: 300px;
+      display: none;
+      background-color: orange;
+      position: fixed;
+      left: 50%;
+      top: 50%;
+      margin-top: -150px;
+      margin-left: -150px;
+      padding: 40px;
+    }
+
+    .login input {
+      box-sizing: border-box;
+      width: 100%;
+      height: 40px;
+      outline: none;
+      margin-bottom: 20px;
+    }
+    .login input::placeholder {
+      position: relative;
+      font-size: 18px;
+      top: 2px;
+    }
+    .login input:focus {
+      border: 2px solid #000;
+    }
+    .login .clouseButton {
+      display: block;
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-color: red;
+      text-align: center;
+      line-height: 20px;
+      cursor: pointer;
+    }
+    .login .clouseButton:hover {
+      background-color: white;
     }
   </style>
-  <body id="top1">
-    <!--[if lt IE 7]>
-      <p class="browsehappy">
-        You are using an <strong>outdated</strong> browser. Please
-        <a href="#">upgrade your browser</a> to improve your experience.
-      </p>
-    <![endif]-->
-    <div>
-      <a href="#top1" class="returnTop">返回顶部</a>
+  <body>
+    <a href="">注册</a>
+    <a href="" id="submit">登入</a>
+    <div class="mark" id="mark"></div>
+    <div class="login" id="login">
+      <span class="clouseButton" id="closeButton"></span>
+      <div class="username">
+        <input type="text" placeholder="账号" />
+      </div>
+      <div class="userpassword">
+        <input type="password" placeholder="密码 " />
+      </div>
+      <div class="submit">
+        <input type="submit" style="margin: 0" value="登入" />
+      </div>
     </div>
+    <script>
+      // 获取 DOM 元素
+      const closeButton = document.getElementById("closeButton");
+      const mark = document.getElementById("mark");
+      const submitButton = document.getElementById("submit");
+      const login = document.getElementById("login");
 
-    <script src="" async defer></script>
+      // 点击关闭按钮时，隐藏遮罩层和登录框
+      closeButton.onclick = function () {
+        mark.style.display = "none";
+        login.style.display = "none";
+      };
+
+      // 点击 "登入" 按钮时，显示遮罩层和登录框
+      submitButton.onclick = function (e) {
+        e.preventDefault(); // 阻止默认行为（页面跳转）
+        mark.style.display = "block"; // 显示遮罩层
+        login.style.display = "block"; // 显示登录框
+      };
+    </script>
   </body>
 </html>
